@@ -7,7 +7,7 @@ from google.genai.types import GenerateContentConfig
 from tech_blog_rag.config import GENERATION_MODEL
 from tech_blog_rag.retriever import SearchResult
 
-SYSTEM_PROMPT = """あなたは ryo-manba（松川 陵）の技術ブログに関する Q&A アシスタントです。
+SYSTEM_PROMPT = """あなたは技術ブログに関する Q&A アシスタントです。
 
 ## ルール
 - 提供されたコンテキスト（記事の抜粋）に基づいてのみ回答してください
