@@ -1,0 +1,52 @@
+[
+  {
+    "question": "React Ariaのコンポーネント設計の特徴は？",
+    "expected_slugs": ["react-aria-component-design"],
+    "expected_keywords": ["useContextProps", "mergeProps", "コンポジション"]
+  },
+  {
+    "question": "Next.js のバンドルサイズを分析する方法は？",
+    "expected_slugs": ["next-bundle-analyzer"],
+    "expected_keywords": ["Composition Pattern", "gzip", "@next/bundle-analyzer"]
+  },
+  {
+    "question": "Server Actions で bind を使う方法は？",
+    "expected_slugs": ["server-actions-bind"],
+    "expected_keywords": ["FormData", "Progressive Enhancement", "bind"]
+  },
+  {
+    "question": "React Ariaでアクセシブルなコンポーネントを作るには？",
+    "expected_slugs": ["ccd0fddcb5e02c", "react-aria-component-design"],
+    "expected_keywords": ["useContextProps", "WAI-ARIA", "ヘッドレス"]
+  },
+  {
+    "question": "Next.js の Template と Layout の違いは？",
+    "expected_slugs": ["8caf1decb1e82c"],
+    "expected_keywords": ["再レンダリング", "状態の保持", "Framer Motion"]
+  },
+  {
+    "question": "Pages Router から App Router への移行手順は？",
+    "expected_slugs": ["b48b85513d08d5"],
+    "expected_keywords": ["Server Components", "Client Components", "getStaticProps"]
+  },
+  {
+    "question": "タッチデバイスでホバースタイルを回避するには？",
+    "expected_slugs": ["hover-style-on-supported-devices"],
+    "expected_keywords": ["@media (hover: hover)", "onPointerEnter", "Pointer Events"]
+  },
+  {
+    "question": "React Taint APIs とは何ですか？",
+    "expected_slugs": ["react-taint-apis"],
+    "expected_keywords": ["taintObjectReference", "taintUniqueValue", "Client Components"]
+  },
+  {
+    "question": "Playwright の VSCode 拡張の使い方は？",
+    "expected_slugs": ["6c2a54196f056d"],
+    "expected_keywords": ["Record at cursor", "Pick locator", "テスト生成"]
+  },
+  {
+    "question": "Stylelint で Baseline をチェックする方法は？",
+    "expected_slugs": ["stylelint-baseline-plugin"],
+    "expected_keywords": ["stylelint-plugin-use-baseline", "widely available", "available"]
+  }
+]

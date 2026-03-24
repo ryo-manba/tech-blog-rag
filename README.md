@@ -56,3 +56,15 @@ uv run pytest tests/ -m "not api" -v
 # 全テスト（API キーが必要）
 uv run pytest tests/ -v
 ```
+
+## 性能評価
+
+`eval/questions.json` に評価用の質問・期待出典・期待キーワードを定義しています。
+
+```bash
+# 検索精度のみ評価（Embedding API のみ使用）
+uv run python scripts/evaluate.py --retrieval-only
+
+# 完全評価（検索 + 回答生成、Rate limit 対策で数分かかる）
+uv run python scripts/evaluate.py
+```
