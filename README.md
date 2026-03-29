@@ -1,13 +1,33 @@
 # tech-blog-rag
 
-自分の技術ブログ記事（Zenn）に対して自然言語で質問できる RAG Q&A ボット。
+技術記事（Markdown）を対象に、自然言語で検索・Q&A ができる RAG ツールです。
+Zenn や Qiita など、任意の Markdown 記事ディレクトリをデータソースとして利用できます。
+
+## 特徴
+
+- Gemini API による高精度な意味検索＆回答生成
+- ChromaDB によるローカルベクトル DB 管理
+- コードブロックや日本語記事にも最適化
+- データソースは .env で自由に指定可能（Zenn 以外も OK）
+
+## データソースのカスタマイズ
+
+デフォルトでは [ryo-manba/zenn-content](https://github.com/ryo-manba/zenn-content) を例にしていますが、
+`.env` の `CONTENT_DIR` や `ZENN_BASE_URL` を変更すれば、他の Markdown 記事ディレクトリも利用できます。
+
+例:
+
+```
+CONTENT_DIR=/path/to/your/markdown-articles
+ZENN_BASE_URL=https://your.site/articles
+```
 
 ## アーキテクチャ
 
 - **Embedding**: Gemini Embedding API (`gemini-embedding-001`)
 - **Vector DB**: ChromaDB（ローカル）
 - **LLM**: Gemini 2.5 Flash (`gemini-2.5-flash`)
-- **データソース**: [ryo-manba/zenn-content](https://github.com/ryo-manba/zenn-content)
+- **データソース**: 任意の Markdown 記事ディレクトリ
 - **コスト**: ¥0（Gemini API 無料枠内で完結）
 
 ## セットアップ
@@ -17,9 +37,11 @@ git clone https://github.com/ryo-manba/tech-blog-rag.git
 cd tech-blog-rag
 uv sync
 
+
 # API キー設定
 cp .env.example .env
 # .env の GEMINI_API_KEY を設定
+
 
 # zenn-content を取得
 git clone https://github.com/ryo-manba/zenn-content.git ../zenn-content
@@ -35,7 +57,7 @@ uv run python scripts/ingest.py --content-dir ../zenn-content
 uv run python scripts/ingest.py --status
 
 # ワンショット質問
-uv run python scripts/query.py -q "React Ariaのコンポーネント設計の特徴は？"
+uv run python scripts/query.py -q "React Aria のコンポーネント設計の特徴は？"
 
 # 対話モード
 uv run python scripts/query.py
@@ -45,7 +67,7 @@ uv run python scripts/query.py
 
 - **task_type 非対称設定**: Embedding 時に Document / Query で `task_type` を使い分け、検索精度を向上
 - **コードブロック保護チャンキング**: コードブロックを保護して分割することで技術記事の文脈を保持
-- **日本語最適化チャンクサイズ**: 500文字 / 100文字オーバーラップで日本語記事に最適化
+- **日本語最適化チャンクサイズ**: 500 文字 / 100 文字オーバーラップで日本語記事に最適化
 
 ## テスト
 
