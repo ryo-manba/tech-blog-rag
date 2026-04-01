@@ -2,51 +2,61 @@
   {
     "question": "React Ariaのコンポーネント設計の特徴は？",
     "expected_slugs": ["react-aria-component-design"],
-    "expected_keywords": ["useContextProps", "mergeProps", "コンポジション"]
+    "expected_keywords": ["useContextProps", "mergeProps", "コンポジション"],
+    "reference": "React Aria Componentsはコンポジションを中心に設計されており、Label、Button、Popoverなどのコンポーネントを独立して使うことも組み合わせて使うことも可能です。useContextPropsとProviderを介してコンテキスト経由でpropsとrefをマージする仕組みにより、各子要素に柔軟にスタイルを適用でき、Contextを活用して内部状態にアクセスしたカスタマイズも実現できます。"
   },
   {
     "question": "Next.js のバンドルサイズを分析する方法は？",
     "expected_slugs": ["next-bundle-analyzer"],
-    "expected_keywords": ["Composition Pattern", "gzip", "@next/bundle-analyzer"]
+    "expected_keywords": ["Composition Pattern", "gzip", "@next/bundle-analyzer"],
+    "reference": "@next/bundle-analyzerを導入することで、Server ComponentsとClient Componentsのバンドルサイズを可視化できます。Client Componentsでライブラリを使用するとクライアントに配信されバンドルサイズが増加しますが、Server Componentsのみで使用すればクライアントのバンドルに含まれません。Composition Patternを活用してServer Componentsをchildren経由でClient Componentsに渡すことで、バンドルサイズを削減できます。"
   },
   {
     "question": "Server Actions で bind を使う方法は？",
     "expected_slugs": ["server-actions-bind"],
-    "expected_keywords": ["FormData", "Progressive Enhancement", "bind"]
+    "expected_keywords": ["FormData", "Progressive Enhancement", "bind"],
+    "reference": "Server Actionsでフォームの入力値以外の情報を渡すには、JavaScriptのbindメソッドを使用し updateUser.bind(null, userId) のようにServer Action関数に引数をバインドしてからformのaction属性に渡します。サーバー側の関数ではバインドした引数をformDataの前に受け取ります。input type=\"hidden\"と異なりプログレッシブエンハンスメントと互換性があります。"
   },
   {
     "question": "React Ariaでアクセシブルなコンポーネントを作るには？",
     "expected_slugs": ["ccd0fddcb5e02c", "react-aria-component-design"],
-    "expected_keywords": ["useContextProps", "WAI-ARIA", "ヘッドレス"]
+    "expected_keywords": ["useContextProps", "WAI-ARIA", "ヘッドレス"],
+    "reference": "React AriaのuseButton等のフックを使い、useRefで作成したDOM参照と共にpropsを渡すと、aria属性やキーボード操作、スクリーンリーダー対応などのアクセシビリティ機能が設定されたpropsオブジェクトが返されるので、それをJSX要素にスプレッドで適用します。複雑なコンポーネントの場合はReact StatelyのuseTabListStateと組み合わせることで状態管理も含めたアクセシブルな実装が行えます。"
   },
   {
     "question": "Next.js の Template と Layout の違いは？",
     "expected_slugs": ["8caf1decb1e82c"],
-    "expected_keywords": ["再レンダリング", "状態の保持", "Framer Motion"]
+    "expected_keywords": ["再レンダリング", "状態の保持", "Framer Motion"],
+    "reference": "Layoutはページ遷移時に再レンダリングされず状態を保持しますが、Templateはページ遷移ごとに新しいDOMが生成されステートやエフェクトが再同期されます。ページ遷移時のアニメーション、ページごとの独立したロギング、フィードバックフォームのリセットなど再レンダリングが必要なケースではTemplateを、それ以外ではパフォーマンスの観点からLayoutの使用が推奨されます。"
   },
   {
     "question": "Pages Router から App Router への移行手順は？",
     "expected_slugs": ["b48b85513d08d5"],
-    "expected_keywords": ["Server Components", "Client Components", "getStaticProps"]
+    "expected_keywords": ["Server Components", "Client Components", "getStaticProps"],
+    "reference": "appディレクトリの作成、pages/_app.tsxと_document.tsxをapp/layout.tsxに統合したルートレイアウトの作成、next/headをMetadata APIに置換、ページをClient Component化してappディレクトリのpage.tsxからインポート、useRouterをnext/navigationのusePathname・useSearchParamsに移行、getServerSideProps/getStaticPropsをfetchやRoute Segment Configに置換、という手順で移行します。"
   },
   {
     "question": "タッチデバイスでホバースタイルを回避するには？",
     "expected_slugs": ["hover-style-on-supported-devices"],
-    "expected_keywords": ["@media (hover: hover)", "onPointerEnter", "Pointer Events"]
+    "expected_keywords": ["@media (hover: hover)", "onPointerEnter", "Pointer Events"],
+    "reference": "CSSメディアクエリの @media (hover: hover) で主な入力デバイスがホバー対応の場合のみスタイルを適用するか、@media (any-hover: hover) でいずれかの入力デバイスがホバー対応の場合に適用できます。iPadにマウスを接続した場合など不整合が生じるケースでは、Pointer Events APIを利用してpointerTypeが\"touch\"の場合にホバー状態を無効化するJavaScriptで対応できます。"
   },
   {
     "question": "React Taint APIs とは何ですか？",
     "expected_slugs": ["react-taint-apis"],
-    "expected_keywords": ["taintObjectReference", "taintUniqueValue", "Client Components"]
+    "expected_keywords": ["taintObjectReference", "taintUniqueValue", "Client Components"],
+    "reference": "React Taint APIsはReactのexperimentalバージョンで提供されるセキュリティ機能で、Server ComponentからClient Componentへ機密データが誤って渡されることを防ぎます。experimental_taintObjectReferenceはオブジェクト全体のクライアント渡しを禁止し、experimental_taintUniqueValueはパスワードやトークンなど特定の値単位でクライアントへの受け渡しを禁止できます。"
   },
   {
     "question": "Playwright の VSCode 拡張の使い方は？",
     "expected_slugs": ["6c2a54196f056d"],
-    "expected_keywords": ["Record at cursor", "Pick locator", "テスト生成"]
+    "expected_keywords": ["Record at cursor", "Pick locator", "テスト生成"],
+    "reference": "Microsoft公式のPlaywright VSCode拡張をインストールすると、Record at cursor機能でブラウザ上のGUI操作をリアルタイムにテストコードとして記録でき、Pick locatorで要素のセレクタをコピーしてアサーションに利用できます。Show Browserオプションを有効にするとテスト実行中のブラウザ動作をリアルタイムで確認でき、テストエクスプローラーから独自configを選択して設定をカスタマイズすることも可能です。"
   },
   {
     "question": "Stylelint で Baseline をチェックする方法は？",
     "expected_slugs": ["stylelint-baseline-plugin"],
-    "expected_keywords": ["stylelint-plugin-use-baseline", "widely available", "available"]
+    "expected_keywords": ["stylelint-plugin-use-baseline", "widely available", "available"],
+    "reference": "stylelint-plugin-use-baselineプラグインをインストールし、.stylelintrc.jsのplugins配列に追加してrulesで plugin/use-baseline を設定します。availableオプションにはwidely（2.5年以上サポート）、newly（2.5年未満も許可）、年指定が設定可能で、CSSのProperty、Selector、At-rule、関数などがBaselineの基準を満たしていない場合に警告を出力します。"
   }
 ]

@@ -1,0 +1,280 @@
+[
+  {
+    "question": "React Ariaのコンポーネント設計の特徴は？",
+    "score": 1.0,
+    "claims": [
+      "React Ariaのコンポーネント設計はコンポジションを中心に設計されている",
+      "コンポーネントを独立して使用できる",
+      "コンポーネントを組み合わせて使用できる",
+      "コンテキストを活用することでコンポーネントの内部状態にアクセスできる",
+      "コンポーネントの独自のカスタマイズを行うことができる",
+      "React AriaはHeadless UIコンポーネントライブラリとなっている"
+    ],
+    "verdicts": [
+      {
+        "claim": "React Ariaのコンポーネント設計はコンポジションを中心に設計されている",
+        "supported": true,
+        "reason": "コンテキストの「React Aria Components のコンポーネントの設計」のセクションの冒頭で「React Aria Components の API は[コンポジションを中心に設計](https://react-spectrum.adobe.com/react-aria/advanced.html#contexts)されています。」と明記されているため。"
+      },
+      {
+        "claim": "コンポーネントを独立して使用できる",
+        "supported": true,
+        "reason": "コンテキストに「コンポーネントは独立して使う場合と組み合わせて使う場合のどちらにも対応している」と記載されているため。"
+      },
+      {
+        "claim": "コンポーネントを組み合わせて使用できる",
+        "supported": true,
+        "reason": "コンテキストに「コンポーネントは独立して使う場合と組み合わせて使う場合のどちらにも対応している」と記載されているため。"
+      },
+      {
+        "claim": "コンテキストを活用することでコンポーネントの内部状態にアクセスできる",
+        "supported": true,
+        "reason": "コンテキストに「コンテキストを活用することで、内部の状態にアクセスし、カスタマイズすることが可能」と明記されている"
+      },
+      {
+        "claim": "コンポーネントの独自のカスタマイズを行うことができる",
+        "supported": true,
+        "reason": "コンテキストに「コンテキストを活用することで、内部の状態にアクセスし、カスタマイズすることが可能」と記載されているため。"
+      },
+      {
+        "claim": "React AriaはHeadless UIコンポーネントライブラリとなっている",
+        "supported": true,
+        "reason": "コンテキストの「React Aria Components は Adobe によって提供されている Headless UI コンポーネントライブラリです。」と明記されているため。"
+      }
+    ]
+  },
+  {
+    "question": "Next.js のバンドルサイズを分析する方法は？",
+    "score": 1.0,
+    "claims": [
+      "Next.js のバンドルサイズを分析するには、Bundle Analyzer を導入する",
+      "導入手順については、Next.js の公式ドキュメントを参照する"
+    ],
+    "verdicts": [
+      {
+        "claim": "Next.js のバンドルサイズを分析するには、Bundle Analyzer を導入する",
+        "supported": true,
+        "reason": "コンテキストの冒頭で「この記事では、Next.js で Bundle Analyzer を導入して、Server Components と Client Components のバンドルサイズを比較します。」と記載されているため、主張はコンテキストから直接裏付けられる。"
+      },
+      {
+        "claim": "導入手順については、Next.js の公式ドキュメントを参照する",
+        "supported": true,
+        "reason": "コンテキスト内で「次のドキュメントを参照してください。」と記載されており、Next.js の公式ドキュメントへのリンクも提供されているため、主張はコンテキストから直接裏付けられる"
+      }
+    ]
+  },
+  {
+    "question": "Server Actions で bind を使う方法は？",
+    "score": 1.0,
+    "claims": [
+      "Server Actions で `bind` を使用すると、`formData` オブジェクトとは別に、追加の引数をサーバー側の関数に渡すことができる",
+      "クライアントコンポーネントで `bind` を使用すると、サーバーアクション関数に引数をバインドする",
+      "最初の引数には `null` を渡す",
+      "その後に渡したい引数を指定する",
+      "バインドされた関数をフォームの `action` 属性に設定する"
+    ],
+    "verdicts": [
+      {
+        "claim": "Server Actions で `bind` を使用すると、`formData` オブジェクトとは別に、追加の引数をサーバー側の関数に渡すことができる",
+        "supported": true,
+        "reason": "コンテキストに「bind は Server Actions で追加の引数をサーバー側の関数に渡すことができる」と明記されているため"
+      },
+      {
+        "claim": "クライアントコンポーネントで `bind` を使用すると、サーバーアクション関数に引数をバインドする",
+        "supported": true,
+        "reason": "コンテキストに「use client;」とあり、クライアントコンポーネントで `updateUser` アクションを `bind` してフォームの `action` 属性に渡していると記載されているため。"
+      },
+      {
+        "claim": "最初の引数には `null` を渡す",
+        "supported": true,
+        "reason": "コンテキストに `updateUser.bind(null, userId)` と記載されているため、最初の引数に `null` を渡していることがわかる。"
+      },
+      {
+        "claim": "その後に渡したい引数を指定する",
+        "supported": true,
+        "reason": "コンテキストに「bind で userId を渡す」と記載されており、bindメソッドは引数を渡すために使用されることが説明されているため。"
+      },
+      {
+        "claim": "バインドされた関数をフォームの `action` 属性に設定する",
+        "supported": true,
+        "reason": "コンテキストに `<form action={updateUserWithId}>` と記述されており、バインドされた関数をフォームの `action` 属性に設定していることが明記されているため。"
+      }
+    ]
+  },
+  {
+    "question": "React Ariaでアクセシブルなコンポーネントを作るには？",
+    "score": 1.0,
+    "claims": [
+      "React AriaはAdobeが提供するオープンソースライブラリである",
+      "React AriaはReactでアクセシブルなコンポーネントを作成するためのフックとユーティリティを提供する",
+      "React Ariaはキーボードとマウスのインタラクションに関する動作を抽象化する",
+      "React Ariaはスクリーンリーダーのサポートに関する動作を抽象化する",
+      "React AriaはWAI-ARIAの設定に関する動作を抽象化する",
+      "React Ariaは直接的なレンダリングを提供しない",
+      "React Ariaの各フックから提供されるDOMプロパティを適切な要素に適用する",
+      "DOM構造とスタイリングを完全に制御できる",
+      "`useRef`を用いてDOMノードへの参照を作成する",
+      "`useButton`のようなReact Ariaのフックを呼び出す"
+    ],
+    "verdicts": [
+      {
+        "claim": "React AriaはAdobeが提供するオープンソースライブラリである",
+        "supported": true,
+        "reason": "コンテキストに「Adobe から提供されるオープンソースのライブラリです。」と明記されているため"
+      },
+      {
+        "claim": "React AriaはReactでアクセシブルなコンポーネントを作成するためのフックとユーティリティを提供する",
+        "supported": true,
+        "reason": "コンテキストの「React Aria は、Adobe から提供されるオープンソースのライブラリです。React でアクセシブルなコンポーネントを作成するためのフックとユーティリティを提供しています。」という記述と一致する"
+      },
+      {
+        "claim": "React Ariaはキーボードとマウスのインタラクションに関する動作を抽象化する",
+        "supported": true,
+        "reason": "コンテキストに「キーボードとマウスのインタラクション、スクリーンリーダーのサポート、WAI-ARIA の設定などに関する動作を抽象化することで」と記載されている"
+      },
+      {
+        "claim": "React Ariaはスクリーンリーダーのサポートに関する動作を抽象化する",
+        "supported": true,
+        "reason": "コンテキストに「キーボードとマウスのインタラクション、スクリーンリーダーのサポート、WAI-ARIA の設定などに関する動作を抽象化することで」と記載されている"
+      },
+      {
+        "claim": "React AriaはWAI-ARIAの設定に関する動作を抽象化する",
+        "supported": true,
+        "reason": "コンテキストに「キーボードとマウスのインタラクション、スクリーンリーダーのサポート、WAI-ARIA の設定などに関する動作を抽象化することで」と記載されている"
+      },
+      {
+        "claim": "React Ariaは直接的なレンダリングを提供しない",
+        "supported": true,
+        "reason": "コンテキストでは、React Ariaがアクセシブルなコンポーネントを作成するためのフックとユーティリティを提供すると書かれており、直接的なレンダリングを提供するとは書かれていません。むしろ、開発者が実装の詳細を気にすることなくユーザー体験に集中できるように抽象化する役割を担っていると説明されています。"
+      },
+      {
+        "claim": "React Ariaの各フックから提供されるDOMプロパティを適切な要素に適用する",
+        "supported": true,
+        "reason": "コンテキストに「キーボードとマウスのインタラクション、スクリーンリーダーのサポート、WAI-ARIA の設定などに関する動作を抽象化することで、開発者は実装の詳細を気にすることなく、ユーザー体験にフォーカスを当てることができます。」とあり、これはDOMプロパティを適用することで実現される"
+      },
+      {
+        "claim": "DOM構造とスタイリングを完全に制御できる",
+        "supported": true,
+        "reason": "コンテキストに「必要な DOM 要素を自由に追加することが可能になります。」と記載されており、DOM構造の制御が可能であることが示唆されている。スタイリングについては直接言及されていないが、DOM要素の自由な追加はスタイリングの自由度も伴うと解釈できるため、DOM構造とスタイリングを完全に制御できると判断できる。"
+      },
+      {
+        "claim": "`useRef`を用いてDOMノードへの参照を作成する",
+        "supported": true,
+        "reason": "コンテキストに「React Aria の使用法について、Button コンポーネントを例に見てみましょう。」とあり、その例として`useRef`のインポートが示されている。"
+      },
+      {
+        "claim": "`useButton`のようなReact Ariaのフックを呼び出す",
+        "supported": true,
+        "reason": "コンテキストに `// Monopackage\nimport { useButton } from 'react-aria';` と `// Individual packages\nimport { useButton } from '@react-aria/button';` のように `useButton` フックの使用例が記載されているため。"
+      }
+    ]
+  },
+  {
+    "question": "Pages Router から App Router への移行手順は？",
+    "score": 0.8571428571428571,
+    "claims": [
+      "Pages RouterからApp Routerへの移行手順がある",
+      "プロジェクトのルートに`app`ディレクトリを作成する",
+      "全てのルートに共通するレイアウトとして`app/layout.tsx`を作成する",
+      "`app/layout.tsx`はPages Routerの`pages/_app.tsx`と`pages/_document.tsx`の役割を引き継ぐ",
+      "`next/head`を使用している場合は、App Routerの新しい方法に置き換える",
+      "ページコンポーネントをクライアントコンポーネントとして別のファイルに移動する",
+      "クライアントコンポーネントに`"
+    ],
+    "verdicts": [
+      {
+        "claim": "Pages RouterからApp Routerへの移行手順がある",
+        "supported": true,
+        "reason": "コンテキストに「ページの移行は以下の手順で行いました。」と記載されており、移行手順が存在することが明記されているため。"
+      },
+      {
+        "claim": "プロジェクトのルートに`app`ディレクトリを作成する",
+        "supported": true,
+        "reason": "コンテキストの「1. **[`app` ディレクトリの作成](https://nextjs.org/docs/pages/building-your-application/upgrading/app-router-migration#step-1-creating-the-app-directory)**」と記載されているため"
+      },
+      {
+        "claim": "全てのルートに共通するレイアウトとして`app/layout.tsx`を作成する",
+        "supported": true,
+        "reason": "コンテキストに「次に、全てのルートに共通するレイアウトとなる`app/layout.tsx`を作成します。App Routerを使用する際には、このファイルの作成が必須となります。」と記載されているため。"
+      },
+      {
+        "claim": "`app/layout.tsx`はPages Routerの`pages/_app.tsx`と`pages/_document.tsx`の役割を引き継ぐ",
+        "supported": true,
+        "reason": "コンテキストに「このルートレイアウトはPages Routerの`pages/_app.tsx`と`pages/_document.tsx`の役割を引き継いでいます。」と明記されているため。"
+      },
+      {
+        "claim": "`next/head`を使用している場合は、App Routerの新しい方法に置き換える",
+        "supported": false,
+        "reason": "コンテキストには`next/head`の使用に関する言及がないため、主張を裏付ける情報はない。移行に関する一般的な注意点として言及されているだけで、具体的な置き換え方法については触れられていない。"
+      },
+      {
+        "claim": "ページコンポーネントをクライアントコンポーネントとして別のファイルに移動する",
+        "supported": true,
+        "reason": "コンテキストの「ページの移行は以下の手順で行いました。1. ページコンポーネントをクライアントコンポーネントに移動する。」と記載されているため。"
+      },
+      {
+        "claim": "クライアントコンポーネントに`",
+        "supported": true,
+        "reason": "コンテキストに `// app/home-page.tsx` のコード例があり、その中で `const [store, setStore] = useState(true);` と記述されていることから、クライアントコンポーネントで `useState` が使用できることがわかります。"
+      }
+    ]
+  },
+  {
+    "question": "タッチデバイスでホバースタイルを回避するには？",
+    "score": 1.0,
+    "claims": [
+      "タッチデバイスでホバースタイルを回避する方法は、主にメディアクエリを使用する方法とJavaScriptを使用する方法の2つがある",
+      "`hover`メディアクエリは、プライマリポインティングデバイスがホバー機能をサポートしている場合に適用される",
+      "`any-hover`メディアクエリは、いずれかのポインティングデバイスがホバー機能をサポートしている場合に適用される",
+      "iPadにトラックパッドやマウスを接続した場合など、デバイスにタッチとマウスカーソルの両方の入力デバイスが存在する場合、メディアクエリのみでは不整合が生じることがある",
+      "`hover`を使用した場合、タッチデバイスとマウスカーソルの両方でホバースタイルが適用されないことがある",
+      "`any-hover`を使用した場合、タッチデバイスでも"
+    ],
+    "verdicts": [
+      {
+        "claim": "タッチデバイスでホバースタイルを回避する方法は、主にメディアクエリを使用する方法とJavaScriptを使用する方法の2つがある",
+        "supported": true,
+        "reason": "コンテキストでは「ユーザーの操作環境に応じて、ホバースタイルをより厳密に制御したい場合は、JavaScript を使用する方法があります。」とあり、メディアクエリを使用する方法とJavaScriptを使用する方法の2つが挙げられています。"
+      },
+      {
+        "claim": "`hover`メディアクエリは、プライマリポインティングデバイスがホバー機能をサポートしている場合に適用される",
+        "supported": true,
+        "reason": "コンテキストに「`hover` メディアクエリは適用されませんが、`any-hover` メディアクエリは有効になります。」とあり、`hover`メディアクエリがプライマリポインティングデバイスがホバー機能をサポートしている場合に適用されることを示唆しているため。"
+      },
+      {
+        "claim": "`any-hover`メディアクエリは、いずれかのポインティングデバイスがホバー機能をサポートしている場合に適用される",
+        "supported": true,
+        "reason": "コンテキストに「`any-hover` メディアクエリは有効になります」と記載されているため、いずれかのポインティングデバイスがホバー機能をサポートしている場合に適用されると推論できる。"
+      },
+      {
+        "claim": "iPadにトラックパッドやマウスを接続した場合など、デバイスにタッチとマウスカーソルの両方の入力デバイスが存在する場合、メディアクエリのみでは不整合が生じることがある",
+        "supported": true,
+        "reason": "コンテキストに「例えば、iPad にトラックパッドやマウスを接続した場合、デバイスにはタッチとマウスカーソルの2つの入力デバイスが存在します。」と記載されており、その場合メディアクエリのみでは不整合が生じることがあると述べられています。"
+      },
+      {
+        "claim": "`hover`を使用した場合、タッチデバイスとマウスカーソルの両方でホバースタイルが適用されないことがある",
+        "supported": true,
+        "reason": "コンテキストに「- `any-hover` を使用した場合\n  - タッチデバイス: ホバースタイルが適用される（望ましくない）\n  - マウスカーソル: ホバースタイルが適用される」と記載されており、`hover` メディアクエリを使用した場合にタッチデバイスとマウスカーソルの両方でホバースタイルが適用される可能性があることが述べられています。"
+      },
+      {
+        "claim": "`any-hover`を使用した場合、タッチデバイスでも",
+        "supported": true,
+        "reason": "コンテキストに「any-hover を使用した場合 - タッチデバイス: ホバースタイルが適用される（望ましくない）」と記載されているため、タッチデバイスで`any-hover`が適用されることが裏付けられます。"
+      }
+    ]
+  },
+  {
+    "question": "React Taint APIs とは何ですか？",
+    "score": NaN,
+    "claims": [
+      "React Taint APIsはReactがexperimentalバージョンで提供するセキュリティ保護機能の一つである",
+      "このAPIを使用することでClient Componentにセキュリティ上の重要なデータが渡されることを防ぐ",
+      "このAPIを使用することでクライアントサイドでの表示リスクを減少させることが目的である",
+      "experimental_taintObjectReferenceは特定のオブジェクト単位で管理するAPIである",
+      "experimental_taintUniqueValueはパスワードやトークンなどの一意な値単位で管理するAPIである",
+      "これらのAPIはデータベースから直接生のユーザーデータやセンシティブな情報を取得し、それを安全にReact Server Componentsで表示するためのユースケースをサポートするために導入された",
+      "従来バックエンドで行われていたデータの加工やフィルタリングの責任が、Server Componentsの導入によりフロントエンドにも及ぶ"
+    ],
+    "verdicts": []
+  }
+]

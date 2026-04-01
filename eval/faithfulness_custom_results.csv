@@ -1,0 +1,8 @@
+question,faithfulness_custom,num_claims,num_supported
+React Ariaのコンポーネント設計の特徴は？,1.0,6,6
+Next.js のバンドルサイズを分析する方法は？,1.0,2,2
+Server Actions で bind を使う方法は？,1.0,5,5
+React Ariaでアクセシブルなコンポーネントを作るには？,1.0,10,10
+Pages Router から App Router への移行手順は？,0.8571428571428571,7,6
+タッチデバイスでホバースタイルを回避するには？,1.0,6,6
+React Taint APIs とは何ですか？,nan,7,0
